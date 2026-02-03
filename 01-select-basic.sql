@@ -6,7 +6,7 @@ show database name;
 
 drop database name;
 
-create table hari (@primarykey id int, name varchar());
+create table hari ( id int primarykey, name varchar());
 
 
 CREATE Database sqllesson2;
@@ -42,7 +42,7 @@ drop table "vegTable";
 
 insert into "vegTable" (id,"firstName","lastName") values (1,Hari, Haran) on conflict (id) do update set name = fyas.name, laset
 
-create table users(@primary key id integer Unique,name varchar(50),phone1 integer);
+create table users( id integer primary key Unique,name varchar(50),phone1 integer);
 
 create table expenses(expenses_id integer,expenses_name varchar(50),expenses_type varchar(50),user_id integer);
 
@@ -66,7 +66,7 @@ select * from expenses  join users on users.id = expenses.user_id;
 
 select * from expenses where user_id in (select id from users);
 
-alter table users modify @primary key id ;
+alter table users modify primary key id ;
 
 ALTER TABLE expenses ADD CONSTRAINT expenses_id PRIMARY KEY (expenses_id);
 
